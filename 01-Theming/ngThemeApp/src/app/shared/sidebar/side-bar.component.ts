@@ -1,17 +1,17 @@
-import { Component, OnInit } from "@angular/core";
-import { EventBusService } from "src/app/shared/eventbus/event-bus.service";
-import { ThemeService } from "../theme/theme.service";
-import { SidebarActions } from "./sidebar-actions";
+import { Component, OnInit } from '@angular/core';
+import { EventBusService } from 'src/app/shared/eventbus/event-bus.service';
+import { ThemeService } from '../theme/theme.service';
+import { SidebarActions } from './sidebar-actions';
 
 @Component({
-  selector: "app-side-bar",
-  templateUrl: "./side-bar.component.html",
-  styleUrls: ["./side-bar.component.scss"]
+  selector: 'app-side-bar',
+  templateUrl: './side-bar.component.html',
+  styleUrls: ['./side-bar.component.scss'],
 })
 export class SideBarComponent implements OnInit {
   constructor(private eb: EventBusService, private ts: ThemeService) {}
 
-  editorDisplayed: boolean = false;
+  editorDisplayed = false;
 
   ngOnInit() {}
 
@@ -29,6 +29,6 @@ export class SideBarComponent implements OnInit {
   }
 
   uploadCloud() {
-    console.log("Uploading to Cloud");
+    console.log('Uploading to Cloud');
   }
 }

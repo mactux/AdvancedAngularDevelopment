@@ -75,7 +75,7 @@ export class OperatorsComponent implements OnInit {
   // JavaScript Array.find
   useFindArr() {
     this.vouchers$
-      .pipe(map((v) => v.find((v: Voucher) => v.ID == 3)))
+      .pipe(map((vs) => vs.find((v: Voucher) => v.ID === 3)))
       .subscribe((data) => this.log('getByID - using find()', data));
   }
 
